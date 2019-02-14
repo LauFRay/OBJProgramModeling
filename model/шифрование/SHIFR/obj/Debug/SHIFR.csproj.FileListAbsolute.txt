@@ -8,3 +8,13 @@ C:\Users\Acer\source\repos\SHIFR\SHIFR\obj\Debug\SHIFR.csproj.GenerateResource.c
 C:\Users\Acer\source\repos\SHIFR\SHIFR\obj\Debug\SHIFR.csproj.CoreCompileInputs.cache
 C:\Users\Acer\source\repos\SHIFR\SHIFR\obj\Debug\SHIFR.exe
 C:\Users\Acer\source\repos\SHIFR\SHIFR\obj\Debug\SHIFR.pdb
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\bin\Debug\SHIFR.exe.config
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\bin\Debug\SHIFR.exe
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\bin\Debug\SHIFR.pdb
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\obj\Debug\SHIFR.csprojAssemblyReference.cache
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\obj\Debug\SHIFR.Form1.resources
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\obj\Debug\SHIFR.Properties.Resources.resources
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\obj\Debug\SHIFR.csproj.GenerateResource.cache
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\obj\Debug\SHIFR.csproj.CoreCompileInputs.cache
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\obj\Debug\SHIFR.exe
+C:\Users\Acer\Documents\GitHub\OBJProgramModeling\model\шифрование\SHIFR\obj\Debug\SHIFR.pdb
