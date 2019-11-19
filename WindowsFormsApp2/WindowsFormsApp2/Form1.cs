@@ -17,7 +17,8 @@ namespace WindowsFormsApp2
         {
             InitializeComponent();
         }
-
+        int vt = 0;
+        int ft = 0;
         string[,] sTest = new  string[200,6];
         int[] value = new int[200];
         int[] vtrue = new int[200];
@@ -116,7 +117,7 @@ namespace WindowsFormsApp2
                 label2.Text += " ";
             }
 
-
+            label4.Text = "вопрос№ " + question.ToString() + " из " + q;
                 //for (int i = 0; i< array.Length;i++)
                 //{
                 //    label1.Text += array[i].ToString();
@@ -135,8 +136,21 @@ namespace WindowsFormsApp2
         private void v_Click(object sender, EventArgs e)
         {
 
+            Button btn = (Button)sender;
+            if (Convert.ToInt32(btn.Tag) == vtrue[arr[question]])
+            {
+                label3.Text = "Правильнно";
+                vt++;
+            }
+            else
+            {
+                label3.Text = "Неправильнно";
+                ft++;
+            }
+            comboBox1.Items.Add(question+1 + " " +label3.Text);
 
             if (question < q) { question++; }
+            label4.Text = "вопрос№ " + question.ToString() + " из " + q + "  правильных: " + vt + "| неправильных: "+ ft;
 
             label2.Text = "ответы: ";
             for (int i = 0; i < arr.Length; i++)
@@ -159,6 +173,18 @@ namespace WindowsFormsApp2
             if (sTest[arr[question], 3] != null) { v3.Text = sTest[arr[question], 3]; }
             if (sTest[arr[question], 4] != null) { v4.Text = sTest[arr[question], 4]; }
             if (sTest[arr[question], 5] != null) { v5.Text = sTest[arr[question], 5]; }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked != true)
+            {
+                label2.Visible = false;
+            }
+            else
+            {
+                label2.Visible = true;
+            }
         }
     }
 }
