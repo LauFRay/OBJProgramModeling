@@ -109,6 +109,7 @@ namespace WindowsFormsApp2
             if (sTest[array[question], 4] != null) { v4.Text = sTest[array[question], 4]; }
             if (sTest[array[question], 5] != null) { v5.Text = sTest[array[question], 5]; }
 
+            label2.Text = "ответы: ";
             for (int i = 0; i < arr.Length; i++)
             {
                 label2.Text += vtrue[arr[i]].ToString();
@@ -133,8 +134,18 @@ namespace WindowsFormsApp2
         
         private void v_Click(object sender, EventArgs e)
         {
+
+
             if (question < q) { question++; }
-            
+
+            label2.Text = "ответы: ";
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i == question) { label2.Text += "|"; }
+                label2.Text += vtrue[arr[i]].ToString();
+                label2.Text += " ";
+                if (i == question) { label2.Text += "|"; }
+            }
             label1.Text = " ";
             v1.Text = "v1";
             v2.Text = "v2";
