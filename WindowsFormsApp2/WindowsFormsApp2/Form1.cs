@@ -20,8 +20,10 @@ namespace WindowsFormsApp2
 
         string[,] sTest = new  string[200,6];
         int[] value = new int[200];
+        int[] vtrue = new int[200];
         int q = 0;
         int question = 0;
+        Random random = new Random();
 
         int[] arr; 
 
@@ -37,13 +39,32 @@ namespace WindowsFormsApp2
                     XmlNode attr = xnode.Attributes.GetNamedItem("name");
                     if (attr != null) sTest[q,0]= attr.Value;
                 }
+
+                int[] Vrand = {1,2,3,4,5};
+                int num = 0;
+                int sInt = 0;
+                for (int a = 0; a < Vrand.Length; a++)
+                {
+                    while (true)
+                    {
+                        num = random.Next(0, Vrand.Length);
+                        if (a <= num)
+                        {
+                            sInt = Vrand[a];
+                            Vrand[a] = Vrand[num];
+                            Vrand[num] = sInt;
+                            break;
+                        }
+                    }
+                }
+
                 foreach (XmlNode childnode in xnode.ChildNodes)
                 {
-                    if (childnode.Name == "v1") { sTest[q, 1] = childnode.InnerText; }
-                    if (childnode.Name == "v2") { sTest[q, 2] = childnode.InnerText; }
-                    if (childnode.Name == "v3") { sTest[q, 3] = childnode.InnerText; }
-                    if (childnode.Name == "v4") { sTest[q, 4] = childnode.InnerText; }
-                    if (childnode.Name == "v5") { sTest[q, 5] = childnode.InnerText; }
+                    if (childnode.Name == "v1") { sTest[q, Vrand[0]] = childnode.InnerText; vtrue[q] = Vrand[0];}
+                    if (childnode.Name == "v2") { sTest[q, Vrand[1]] = childnode.InnerText; }
+                    if (childnode.Name == "v3") { sTest[q, Vrand[2]] = childnode.InnerText; }
+                    if (childnode.Name == "v4") { sTest[q, Vrand[3]] = childnode.InnerText; }
+                    if (childnode.Name == "v5") { sTest[q, Vrand[4]] = childnode.InnerText; }
                 }
                 q++;
             }
@@ -53,7 +74,7 @@ namespace WindowsFormsApp2
             int number = 0;
             int saveInt = 0;
 
-            Random random = new Random();
+            
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = i ;
@@ -75,21 +96,31 @@ namespace WindowsFormsApp2
             arr = array;
 
             label1.Text = " ";
-            checkedListBox1.Items.Clear();
+            v1.Text = "v1";
+            v2.Text = "v2";
+            v3.Text = "v3";
+            v4.Text = "v4";
+            v5.Text = "v5";
 
-            label1.Text = sTest[array[0], 0];
-            for (int j = 1; j <= 5; j++)
+            label1.Text = sTest[array[question], 0];
+            if (sTest[array[question], 1] != null) { v1.Text = sTest[array[question], 1]; }
+            if (sTest[array[question], 2] != null) { v2.Text = sTest[array[question], 2]; }
+            if (sTest[array[question], 3] != null) { v3.Text = sTest[array[question], 3]; }
+            if (sTest[array[question], 4] != null) { v4.Text = sTest[array[question], 4]; }
+            if (sTest[array[question], 5] != null) { v5.Text = sTest[array[question], 5]; }
+
+            for (int i = 0; i < arr.Length; i++)
             {
-                if (sTest[array[question], j] != null)
-                {
-                    checkedListBox1.Items.Add(sTest[array[question], j]);
-                }
+                label2.Text += vtrue[arr[i]].ToString();
+                label2.Text += " ";
             }
-            //for (int i = 0; i< array.Length;i++)
-            //{
-            //    label1.Text += array[i].ToString();
-            //    label1.Text += " ";
-            //}
+
+
+                //for (int i = 0; i< array.Length;i++)
+                //{
+                //    label1.Text += array[i].ToString();
+                //    label1.Text += " ";
+                //}
 
 
 
@@ -97,25 +128,26 @@ namespace WindowsFormsApp2
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (checkedListBox1.CheckedItems.Count > 0)
-            {
-                for (int i = 0; i < checkedListBox1.Items.Count; i++)
-                    checkedListBox1.SetItemChecked(i, false);
-                checkedListBox1.SetItemChecked(checkedListBox1.SelectedIndex, true);
-                if (question < arr.Length)
-                question++;
-                label1.Text = " ";
-                checkedListBox1.Items.Clear();
+           
+        }
+        
+        private void v_Click(object sender, EventArgs e)
+        {
+            if (question < q) { question++; }
+            
+            label1.Text = " ";
+            v1.Text = "v1";
+            v2.Text = "v2";
+            v3.Text = "v3";
+            v4.Text = "v4";
+            v5.Text = "v5";
 
-                label1.Text = sTest[arr[0], 0];
-                for (int j = 1; j <= 5; j++)
-                {
-                    if (sTest[arr[question], j] != null)
-                    {
-                        checkedListBox1.Items.Add(sTest[arr[question], j]);
-                    }
-                }
-            }
+            label1.Text = sTest[arr[question], 0];
+            if (sTest[arr[question], 1] != null) { v1.Text = sTest[arr[question], 1]; }
+            if (sTest[arr[question], 2] != null) { v2.Text = sTest[arr[question], 2]; }
+            if (sTest[arr[question], 3] != null) { v3.Text = sTest[arr[question], 3]; }
+            if (sTest[arr[question], 4] != null) { v4.Text = sTest[arr[question], 4]; }
+            if (sTest[arr[question], 5] != null) { v5.Text = sTest[arr[question], 5]; }
         }
     }
 }
