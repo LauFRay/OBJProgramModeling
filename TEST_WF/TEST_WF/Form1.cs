@@ -179,9 +179,9 @@ namespace TEST_WF
             AddHistory();
             for (int i = 0; i < Test.testsize;i++)
             {
-                if (TestResult[i] == 1) { TestHistory.Nodes[i].Text = (i + 1) + " Правельно"; }
+                if (TestResult[i] == 1) { TestHistory.Nodes[i].Text = (i + 1) + " Правильно"; }
                 if (TestResult[i] == 2) {
-                    TestHistory.Nodes[i].Text = (i + 1) + " Неравельно";
+                    TestHistory.Nodes[i].Text = (i + 1) + " Неправильно";
                     TestHistory.Nodes[i].Nodes.Add("");
                     TestHistory.Nodes[i].Nodes[0].Text = Test.question[TestSequence[i]];
                     TestHistory.Nodes[i].Nodes.Add("");
