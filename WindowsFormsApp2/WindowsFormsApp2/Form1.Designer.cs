@@ -56,6 +56,7 @@
             // 
             this.v1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.v1.BackColor = System.Drawing.SystemColors.Control;
             this.v1.Font = new System.Drawing.Font("Arial Narrow", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.v1.Location = new System.Drawing.Point(12, 205);
             this.v1.Name = "v1";
@@ -63,7 +64,7 @@
             this.v1.TabIndex = 2;
             this.v1.Tag = "1";
             this.v1.Text = "button1";
-            this.v1.UseVisualStyleBackColor = true;
+            this.v1.UseVisualStyleBackColor = false;
             this.v1.Click += new System.EventHandler(this.v_Click);
             // 
             // v2
@@ -169,6 +170,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(656, 178);
             this.comboBox1.Name = "comboBox1";

@@ -149,6 +149,20 @@ namespace WindowsFormsApp2
             }
             comboBox1.Items.Add(question+1 + " " +label3.Text);
 
+            //if (Convert.ToInt32(v1.Tag) == vtrue[arr[question]]) { v1.BackColor = Color.Green; } else { v1.BackColor = Color.Red; }
+            //if (Convert.ToInt32(v2.Tag) == vtrue[arr[question]]) { v2.BackColor = Color.Green; } else { v2.BackColor = Color.Red; }
+            //if (Convert.ToInt32(v3.Tag) == vtrue[arr[question]]) { v3.BackColor = Color.Green; } else { v3.BackColor = Color.Red; }
+            //if (Convert.ToInt32(v4.Tag) == vtrue[arr[question]]) { v4.BackColor = Color.Green; } else { v4.BackColor = Color.Red; }
+            //if (Convert.ToInt32(v5.Tag) == vtrue[arr[question]]) { v5.BackColor = Color.Green; } else { v5.BackColor = Color.Red; }
+
+
+            //for (int h = 0;h < 999999999; h++) { }
+            //v1.BackColor = Color.Gray;
+            //v2.BackColor = Color.Gray;
+            //v3.BackColor = Color.Gray;
+            //v4.BackColor = Control.DefaultBackColor;
+            //v5.BackColor = Control.DefaultBackColor;
+
             if (question < q) { question++; }
             label4.Text = "вопрос№ " + question.ToString() + " из " + q + "  правильных: " + vt + "| неправильных: "+ ft;
 
